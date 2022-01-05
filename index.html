@@ -9,6 +9,33 @@
     <script src="https://cdn.jsdelivr.net/gh/zh-lx/pinyin-pro@latest/dist/pinyin-pro.js"></script>
 	</head>
 	<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://github.com/dabeng">
+          <img src="logo.png" width="108" height="108">
+        </a>
+        
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            成语
+          </a>
+    
+          <a class="navbar-item">
+            生词
+          </a>
+        </div>
+
+      </div>
+    </nav>
+
 		<div class="columns is-mobile is-centered" style="padding: 1rem 0;">
       <div class="column">
         <input class="input is-danger" type="text" placeholder="请输入" id="char_source" maxlength="1" style="font-size: 48px;">
@@ -17,11 +44,7 @@
         <button class="button is-fullwidth is-primary" style="font-size: 48px;" id="btn_animate">演示</button>
       </div>
     </div>
-    <div class="columns is-mobile is-centered" id="char_pinyin">
-      <!-- <div class="column">
-        <h1 class="title is-1" id="char_pinyin"></h1>
-      </div> -->
-    </div>
+    <div class="columns is-mobile is-centered" id="char_pinyin"></div>
     <div class="columns is-mobile is-centered">
       <div class="column is-narrow">
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target">
@@ -39,7 +62,7 @@
       </div>
     </div>
     <script type="text/javascript">
-      const writer = HanziWriter.create('char_target', '宋', {
+      const writer = HanziWriter.create('char_target', '董', {
         width: 800,
         height: 800,
         padding: 5,
@@ -53,12 +76,11 @@
         writer.setCharacter(e.target.value);
 
         // 更新拼音
-        // document.querySelector('#char_pinyin').textContent = pinyin(e.target.value, {multiple: true});
         document.querySelector('#char_pinyin').innerHTML = `
         ${pinyin(e.target.value, {multiple: true}).split(' ').map(p => `
             <div class="column">
               <div class="box">
-                <h1 class="title is-1" id="char_pinyin">${p}</h1>
+                <h1 class="title" id="char_pinyin" style="font-size: 72px;">${p}</h1>
               </div>
             </div>
           `).join('')}

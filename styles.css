@@ -3,3 +3,10 @@ html,body {
   margin: 0;
 }
 
+.navbar-item img {
+  max-height: 108px;
+}
+
+.navbar-item {
+  font-size: 36px;
+}
