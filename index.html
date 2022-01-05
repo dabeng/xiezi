@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="bulma.min.css" />
+		<link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.2/dist/hanzi-writer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/zh-lx/pinyin-pro@latest/dist/pinyin-pro.js"></script>
+	</head>
+	<body>
+		<div class="columns is-mobile is-centered" style="padding: 1rem 0;">
+      <div class="column">
+        <input class="input is-danger" type="text" placeholder="请输入" id="char_source" maxlength="1" style="font-size: 48px;">
+      </div>
+      <div class="column">
+        <button class="button is-fullwidth is-primary" style="font-size: 48px;" id="btn_animate">演示</button>
+      </div>
+    </div>
+    <div class="columns is-mobile is-centered" id="char_pinyin">
+      <!-- <div class="column">
+        <h1 class="title is-1" id="char_pinyin"></h1>
+      </div> -->
+    </div>
+    <div class="columns is-mobile is-centered">
+      <div class="column is-narrow">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target">
+          <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+        </svg>
+      </div>
+    </div>
+		<div class="columns is-mobile is-centered">
+      <div class="column is-three-quarters-mobile is-half-tablet is-one-quarter-desktop">
+        
+      </div>
+    </div>
+    <script type="text/javascript">
+      const writer = HanziWriter.create('char_target', '宋', {
+        width: 800,
+        height: 800,
+        padding: 5,
+        showOutline: true,
+      });
+
+      const { pinyin } = pinyinPro;
+
+      document.querySelector('#char_source').addEventListener('change', e => {
+        // 更新字
+        writer.setCharacter(e.target.value);
+
+        // 更新拼音
+        // document.querySelector('#char_pinyin').textContent = pinyin(e.target.value, {multiple: true});
+        document.querySelector('#char_pinyin').innerHTML = `
+        ${pinyin(e.target.value, {multiple: true}).split(' ').map(p => `
+            <div class="column">
+              <div class="box">
+                <h1 class="title is-1" id="char_pinyin">${p}</h1>
+              </div>
+            </div>
+          `).join('')}
+        `;
+
+      });
+
+      document.querySelector('#btn_animate').addEventListener('click', function() {
+        writer.animateCharacter();
+      });
+
+    </script>
+	</body>
+</html>
