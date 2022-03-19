@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Kai Ti";
+  src: url("/FangZhengKaiTiJianTi.ttf");
+}
+
 html,body {
   padding: 0;
   margin: 0;
@@ -17,6 +22,7 @@ html,body {
 
 #pianpang_table {
   font-size: 108px;
+  font-family: "Kai Ti";
 }
 
 #pianpang_table th, #pianpang_table td {
