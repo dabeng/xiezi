@@ -10,3 +10,7 @@ html,body {
 .navbar-item {
   font-size: 36px;
 }
+
+.is_hidden {
+  display: none!important;
+}

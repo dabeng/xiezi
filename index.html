@@ -36,48 +36,150 @@
       </div>
     </nav>
 
-		<div class="columns is-mobile is-centered" style="padding: 1rem 0;">
+		<div class="columns is-mobile is-centered" style="padding: 1rem;">
       <div class="column">
-        <input class="input is-danger" type="text" placeholder="请输入" id="char_source" maxlength="1" style="font-size: 48px;">
-      </div>
-      <div class="column">
-        <button class="button is-fullwidth is-primary" style="font-size: 48px;" id="btn_animate">演示</button>
+        <input class="input is-danger" type="text" placeholder="请输入" id="char_source" maxlength="10" style="font-size: 48px;">
       </div>
     </div>
     <div class="columns is-mobile is-centered" id="char_pinyin"></div>
-    <div class="columns is-mobile is-centered">
+    <div class="columns is-mobile is-centered is-flex-direction-column">
       <div class="column is-narrow">
-        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_1">
           <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
           <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
           <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
           <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
           <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
         </svg>
+        <button class="button is-fullwidth is-primary btn_animate" style="font-size: 48px;">演示</button>
+      </div>
+      <div class="column is-narrow is_hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_2">
+          <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+        </svg>
+        <button class="button is-fullwidth is-primary btn_animate" style="font-size: 48px;">演示</button>
+      </div>
+      <div class="column is-narrow is_hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_3">
+          <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+        </svg>
+        <button class="button is-fullwidth is-primary btn_animate" style="font-size: 48px;">演示</button>
+      </div>
+      <div class="column is-narrow is_hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_4">
+          <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+        </svg>
+        <button class="button is-fullwidth is-primary btn_animate" style="font-size: 48px;">演示</button>
+      </div>
+      <div class="column is-narrow is_hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_5">
+          <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+        </svg>
+        <button class="button is-fullwidth is-primary btn_animate" style="font-size: 48px;">演示</button>
+      </div>
+      <div class="column is-narrow is_hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_6">
+          <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+        </svg>
+        <button class="button is-fullwidth is-primary btn_animate" style="font-size: 48px;">演示</button>
+      </div>
+      <div class="column is-narrow is_hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_7">
+          <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+        </svg>
+        <button class="button is-fullwidth is-primary btn_animate" style="font-size: 48px;">演示</button>
+      </div>
+      <div class="column is-narrow is_hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_8">
+          <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+        </svg>
+        <button class="button is-fullwidth is-primary btn_animate" style="font-size: 48px;">演示</button>
+      </div>
+      <div class="column is-narrow is_hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_9">
+          <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+        </svg>
+        <button class="button is-fullwidth is-primary btn_animate" style="font-size: 48px;">演示</button>
+      </div>
+      <div class="column is-narrow is_hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_10">
+          <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+        </svg>
+        <button class="button is-fullwidth is-primary btn_animate" style="font-size: 48px;">演示</button>
       </div>
     </div>
-		<div class="columns is-mobile is-centered">
-      <div class="column is-three-quarters-mobile is-half-tablet is-one-quarter-desktop">
-        
-      </div>
-    </div>
+
     <script type="text/javascript">
-      const writer = HanziWriter.create('char_target', '董', {
-        width: 800,
-        height: 800,
-        padding: 5,
-        showOutline: true,
+      const writers = Array.from(Array(10), (v, i) => {
+        return HanziWriter.create('char_target_' + (i + 1), '', {
+          width: 800,
+          height: 800,
+          padding: 5,
+          showOutline: true,
+        });
       });
 
       const { pinyin } = pinyinPro;
 
       document.querySelector('#char_source').addEventListener('change', e => {
-        // 更新字
-        writer.setCharacter(e.target.value);
+        /* 更新字 */
+        for (let i=1;i<=10;i++) {
+          if (i <= e.target.value.length) {
+            // 根据字的多少，来切换显示田字格背景
+            document.querySelector('#char_target_' + i).parentNode.classList.remove('is_hidden');
+            // 更新相应的示例字体
+            writers[i-1].setCharacter(e.target.value[i-1]);
+          } else {
+            document.querySelector('#char_target_' + i).parentNode.classList.add('is_hidden');
+          }
+        }
 
-        // 更新拼音
+        /* 更新拼音 */
+        // 输入多于一个字时，不显示拼音
+        if (e.target.value.length > 1) {
+          document.querySelector('#char_pinyin').innerHTML = ``;
+          return;
+        }
+
+        // 输入单个字时，显示该字所有的多音。【待做】将来最好提供多音多义的组词示例
         document.querySelector('#char_pinyin').innerHTML = `
-        ${pinyin(e.target.value, {multiple: true}).split(' ').map(p => `
+        ${pinyin(e.target.value[0], {multiple: true}).split(' ').map(p => `
             <div class="column">
               <div class="box">
                 <h1 class="title" id="char_pinyin" style="font-size: 98px;">${p}</h1>
@@ -88,9 +190,12 @@
 
       });
 
-      document.querySelector('#btn_animate').addEventListener('click', function() {
-        writer.animateCharacter();
-      });
+      // 演示笔画的event handler
+      for (const [i,button] of document.querySelectorAll('.btn_animate').entries()) {
+        button.addEventListener('click', function(event) {
+          writers[i].animateCharacter();
+        });
+      }
 
     </script>
 	</body>
