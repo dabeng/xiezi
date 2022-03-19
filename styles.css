@@ -15,6 +15,14 @@ html,body {
   font-size: 64px;
 }
 
+#pianpang_table {
+  font-size: 108px;
+}
+
+#pianpang_table th, #pianpang_table td {
+  padding: 0.25em;
+}
+
 .is_hidden {
   display: none!important;
 }
