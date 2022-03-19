@@ -1,44 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="shortcut icon" href="/favicon.png" type="image/x-icon"/>
-    <link rel="stylesheet" href="bulma.min.css" />
-		<link rel="stylesheet" href="styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.2/dist/hanzi-writer.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/zh-lx/pinyin-pro@latest/dist/pinyin-pro.js"></script>
-	</head>
-	<body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://github.com/dabeng">
-          <img src="logo.png" width="108" height="108">
-        </a>
-        
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-    
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            成语
-          </a>
-    
-          <a class="navbar-item">
-            生词
-          </a>
-        </div>
 
-      </div>
-    </nav>
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="bulma.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.2/dist/hanzi-writer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/zh-lx/pinyin-pro@latest/dist/pinyin-pro.js"></script>
+</head>
 
-		<div class="columns is-mobile is-centered" style="padding: 1rem;">
+<body>
+  <div class="tabs navbar" style="font-size: 72px;">
+    <ul>
+      <li class="tab_title xiezi is-active" data-id="xiezi"><a>写字</a></li>
+      <li class="tab_title pianpang" data-id="pianpang"><a>偏旁</a></li>
+    </ul>
+  </div>
+
+  <div class="tab_pane xiezi">
+    <div class="columns is-mobile is-centered" style="padding: 1rem;">
       <div class="column">
-        <input class="input is-danger" type="text" placeholder="请输入" id="char_source" maxlength="10" style="font-size: 48px;">
+        <input class="input is-danger" type="text" placeholder="请输入" id="char_source" maxlength="10"
+          style="font-size: 48px;">
       </div>
     </div>
     <div class="columns is-mobile is-centered" id="char_pinyin"></div>
@@ -46,140 +30,600 @@
       <div class="column is-narrow">
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_1">
           <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
-          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_2">
           <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
-          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_3">
           <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
-          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_4">
           <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
-          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
         <button class="button is-primary is-fullwidth btn_animate" style="font-size: 48px;">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_5">
           <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
-          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_6">
           <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
-          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_7">
           <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
-          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_8">
           <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
-          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_9">
           <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
-          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
         <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" id="char_target_10">
           <rect x="0" y="0" width="800" height="800" stroke="#f14668" stroke-width="10" fill="transparent" />
-          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
-          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10"/>
+          <line x1="0" y1="0" x2="800" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="800" y1="0" x2="0" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
+          <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
     </div>
+  </div>
 
-    <script type="text/javascript">
-      const writers = Array.from(Array(10), (v, i) => {
-        return HanziWriter.create('char_target_' + (i + 1), '', {
-          width: 800,
-          height: 800,
-          padding: 5,
-          showOutline: true,
-        });
+  <div class="tab_pane pianpang is_hidden">
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="font-size: 108px;">
+      <thead>
+        <tr>
+          <th>偏旁</th>
+          <th>名称</th>
+          <th>例子</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>冫</td>
+          <td>两点水</td>
+          <td>冷</td>
+        </tr>
+        <tr>
+          <td>冖</td>
+          <td>秃宝盖</td>
+          <td>写</td>
+        </tr>
+        <tr>
+          <td>讠</td>
+          <td>言字旁</td>
+          <td>语</td>
+        </tr>
+        <tr>
+          <td>刂</td>
+          <td>立刀旁</td>
+          <td>别</td>
+        </tr>
+        <tr>
+          <td>厂</td>
+          <td>厂字旁</td>
+          <td>原</td>
+        </tr>
+        <tr>
+          <td>亻</td>
+          <td>单人旁</td>
+          <td>保</td>
+        </tr>
+        <tr>
+          <td>卩</td>
+          <td>单耳刀</td>
+          <td>却</td>
+        </tr>
+        <tr>
+          <td>阝</td>
+          <td>双耳刀</td>
+          <td>陆</td>
+        </tr>
+        <tr>
+          <td>廴</td>
+          <td>建字旁</td>
+          <td>建</td>
+        </tr>        
+        <tr>
+          <td>勹</td>
+          <td>包字头</td>
+          <td>勺</td>
+        </tr>
+        <tr>
+          <td>厶</td>
+          <td>私字</td>
+          <td>参</td>
+        </tr>        
+        <tr>
+          <td>匚</td>
+          <td>三框</td>
+          <td>医</td>
+        </tr>
+        <tr>
+          <td>冂</td>
+          <td>同字框</td>
+          <td>网</td>
+        </tr>        
+        <tr>
+          <td>氵</td>
+          <td>三点水</td>
+          <td>河</td>
+        </tr>
+        <tr>
+          <td>彡</td>
+          <td>三撇</td>
+          <td>须，形</td>
+        </tr>
+        <tr>
+          <td class="has-text-danger">巛</td>
+          <td>三拐</td>
+          <td>巢</td>
+        </tr>        
+        <tr>
+          <td>忄</td>
+          <td>竖心旁</td>
+          <td>怕</td>
+        </tr>
+        <tr>
+          <td class="has-text-danger">丬</td>
+          <td>将字旁</td>
+          <td>状</td>
+        </tr>
+        <tr>
+          <td>宀</td>
+          <td>宝盖</td>
+          <td>宝</td>
+        </tr>        
+        <tr>
+          <td>广</td>
+          <td>广字旁</td>
+          <td>床</td>
+        </tr>
+        <tr>
+          <td>辶</td>
+          <td>走之旁</td>
+          <td>连</td>
+        </tr>        
+        <tr>
+          <td>扌</td>
+          <td>提手旁</td>
+          <td>打</td>
+        </tr>
+        <tr>
+          <td>土</td>
+          <td>提土旁</td>
+          <td>地</td>
+        </tr>        
+        <tr>
+          <td>艹</td>
+          <td>草字头</td>
+          <td>药</td>
+        </tr>
+        <tr>
+          <td>大</td>
+          <td>大字头</td>
+          <td>套</td>
+        </tr>        
+        <tr>
+          <td>小</td>
+          <td>小字头</td>
+          <td>肖</td>
+        </tr>
+        <tr>
+          <td>口</td>
+          <td>口字旁</td>
+          <td>唱</td>
+        </tr>        
+        <tr>
+          <td>囗</td>
+          <td>方框</td>
+          <td>国</td>
+        </tr>
+        <tr>
+          <td>门</td>
+          <td>门字框</td>
+          <td>阅</td>
+        </tr>        
+        <tr>
+          <td>巾</td>
+          <td>巾字旁</td>
+          <td>师</td>
+        </tr>
+        <tr>
+          <td>山</td>
+          <td>山字旁</td>
+          <td>峡</td>
+        </tr>        
+        <tr>
+          <td>彳</td>
+          <td>双人旁</td>
+          <td>行</td>
+        </tr>
+        <tr>
+          <td>犭</td>
+          <td>反犬旁</td>
+          <td>狗</td>
+        </tr>        
+        <tr>
+          <td>饣</td>
+          <td>食字旁</td>
+          <td>饮</td>
+        </tr>
+        <tr>
+          <td>尸</td>
+          <td>尸字头</td>
+          <td>屈</td>
+        </tr>        
+        <tr>
+          <td>弓</td>
+          <td>弓字旁</td>
+          <td>张</td>
+        </tr>
+        <tr>
+          <td>孑</td>
+          <td>子字旁</td>
+          <td>孩</td>
+        </tr>        
+        <tr>
+          <td>女</td>
+          <td>女字旁</td>
+          <td>妈</td>
+        </tr>
+        <tr>
+          <td>纟</td>
+          <td>绞丝旁</td>
+          <td>绸</td>
+        </tr>        
+        <tr>
+          <td>马</td>
+          <td>马字旁</td>
+          <td>驰</td>
+        </tr>
+        <tr>
+          <td>灬</td>
+          <td>四点</td>
+          <td>杰</td>
+        </tr>        
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>方</td>
+          <td>方字旁</td>
+          <td>旅</td>
+        </tr>        
+        <tr>
+          <td>手</td>
+          <td>手字旁</td>
+          <td>拜</td>
+        </tr>
+        <tr>
+          <td>欠</td>
+          <td>欠字旁</td>
+          <td>欢</td>
+        </tr>        
+        <tr>
+          <td>火</td>
+          <td>火字旁</td>
+          <td>炕</td>
+        </tr>
+        <tr>
+          <td>心</td>
+          <td>心字旁</td>
+          <td>思</td>
+        </tr>        
+        <tr>
+          <td>户</td>
+          <td>户字旁</td>
+          <td>扇</td>
+        </tr>
+        <tr>
+          <td class="has-text-danger">礻</td>
+          <td>示字旁</td>
+          <td>祖</td>
+        </tr>        
+        <tr>
+          <td>王</td>
+          <td>王字旁</td>
+          <td>环</td>
+        </tr>
+        <tr>
+          <td>木</td>
+          <td>木字旁</td>
+          <td>村</td>
+        </tr>        
+        <tr>
+          <td>车</td>
+          <td>车字旁</td>
+          <td>辆</td>
+        </tr>
+        <tr>
+          <td>日</td>
+          <td>日字旁</td>
+          <td>晚</td>
+        </tr>        
+        <tr>
+          <td>牜</td>
+          <td>牛字旁</td>
+          <td>特</td>
+        </tr>
+        <tr>
+          <td class="has-text-danger">攵</td>
+          <td>反文旁</td>
+          <td>故</td>
+        </tr>
+        <tr>
+          <td class="has-text-danger">夂</td>
+          <td>折文</td>
+          <td>处，夏</td>
+        </tr>     
+        <tr>
+          <td class="has-text-danger">爫</td>
+          <td>爪字头</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>月</td>
+          <td>月字旁</td>
+          <td>肚</td>
+        </tr>        
+        <tr>
+          <td>穴</td>
+          <td>穴宝盖</td>
+          <td>空</td>
+        </tr>
+        <tr>
+          <td>目</td>
+          <td>目字旁</td>
+          <td></td>
+        </tr>        
+        <tr>
+          <td>田</td>
+          <td>田字旁</td>
+          <td>略</td>
+        </tr>
+        <tr>
+          <td>石</td>
+          <td>石字旁</td>
+          <td>研</td>
+        </tr>        
+        <tr>
+          <td>疒</td>
+          <td>病字旁</td>
+          <td>疼</td>
+        </tr>
+        <tr>
+          <td class="has-text-danger">衤</td>
+          <td>衣字旁</td>
+          <td></td>
+        </tr>        
+        <tr>
+          <td>钅</td>
+          <td>金字旁</td>
+          <td>钱</td>
+        </tr>
+        <tr>
+          <td>罒</td>
+          <td>皿字头</td>
+          <td>蜀</td>
+        </tr>        
+        <tr>
+          <td>皿</td>
+          <td>皿字底</td>
+          <td>孟</td>
+        </tr>
+        <tr>
+          <td>禾</td>
+          <td>禾木旁</td>
+          <td>秋</td>
+        </tr>        
+        <tr>
+          <td>鸟</td>
+          <td>鸟字旁</td>
+          <td>鸭</td>
+        </tr>
+        <tr>
+          <td>米</td>
+          <td>米字旁</td>
+          <td>糕</td>
+        </tr>        
+        <tr>
+          <td>西</td>
+          <td>西字头</td>
+          <td>要</td>
+        </tr>
+        <tr>
+          <td>舌</td>
+          <td>舌字旁</td>
+          <td>乱</td>
+        </tr>        
+        <tr>
+          <td>缶</td>
+          <td>缶字旁</td>
+          <td>缺</td>
+        </tr>
+        <tr>
+          <td>耳</td>
+          <td>耳字旁</td>
+          <td>职</td>
+        </tr>        
+        <tr>
+          <td>虫</td>
+          <td>虫字旁</td>
+          <td>蛇</td>
+        </tr>
+        <tr>
+          <td>虍</td>
+          <td>虎字头</td>
+          <td>虑</td>
+        </tr>        
+        <tr>
+          <td>竹</td>
+          <td>竹字头</td>
+          <td>篮</td>
+        </tr>
+        <tr>
+          <td>舟</td>
+          <td>舟字旁</td>
+          <td>船</td>
+        </tr>        
+        <tr>
+          <td>走</td>
+          <td>走字旁</td>
+          <td>赶</td>
+        </tr>
+        <tr>
+          <td>足</td>
+          <td>足字旁</td>
+          <td>踢</td>
+        </tr>        
+        <tr>
+          <td>角</td>
+          <td>角字旁</td>
+          <td>解</td>
+        </tr>
+        <tr>
+          <td>身</td>
+          <td>身字旁</td>
+          <td>躲</td>
+        </tr>        
+        <tr>
+          <td>鱼</td>
+          <td>鱼字旁</td>
+          <td>鲜</td>
+        </tr>
+        <tr>
+          <td>雨</td>
+          <td>雨字头</td>
+          <td>雪</td>
+        </tr>        
+        <tr>
+          <td>齿</td>
+          <td>齿字旁</td>
+          <td>龄</td>
+        </tr>
+        <tr>
+          <td>革</td>
+          <td>革字旁</td>
+          <td>靴</td>
+        </tr>
+        <tr>
+          <td>骨</td>
+          <td>骨字旁</td>
+          <td>骼</td>
+        </tr>        
+        <tr>
+          <td>音</td>
+          <td>音字旁</td>
+          <td>韵</td>
+        </tr>
+        <tr>
+          <td>癶</td>
+          <td>登字头</td>
+          <td>葵</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script type="text/javascript">
+    const writers = Array.from(Array(10), (v, i) => {
+      return HanziWriter.create('char_target_' + (i + 1), '', {
+        width: 800,
+        height: 800,
+        padding: 5,
+        showOutline: true,
       });
+    });
 
-      const { pinyin } = pinyinPro;
+    const { pinyin } = pinyinPro;
 
-      document.querySelector('#char_source').addEventListener('change', e => {
-        /* 更新字 */
-        for (let i=1;i<=10;i++) {
-          if (i <= e.target.value.length) {
-            // 根据字的多少，来切换显示田字格背景
-            document.querySelector('#char_target_' + i).parentNode.classList.remove('is_hidden');
-            // 更新相应的示例字体
-            writers[i-1].setCharacter(e.target.value[i-1]);
-          } else {
-            document.querySelector('#char_target_' + i).parentNode.classList.add('is_hidden');
-          }
+    document.querySelector('#char_source').addEventListener('change', e => {
+      /* 更新字 */
+      for (let i = 1; i <= 10; i++) {
+        if (i <= e.target.value.length) {
+          // 根据字的多少，来切换显示田字格背景
+          document.querySelector('#char_target_' + i).parentNode.classList.remove('is_hidden');
+          // 更新相应的示例字体
+          writers[i - 1].setCharacter(e.target.value[i - 1]);
+        } else {
+          document.querySelector('#char_target_' + i).parentNode.classList.add('is_hidden');
         }
+      }
 
-        /* 更新拼音 */
-        // 输入多于一个字时，不显示拼音
-        if (e.target.value.length > 1) {
-          document.querySelector('#char_pinyin').innerHTML = ``;
-          return;
-        }
+      /* 更新拼音 */
+      // 输入多于一个字时，不显示拼音
+      if (e.target.value.length > 1) {
+        document.querySelector('#char_pinyin').innerHTML = ``;
+        return;
+      }
 
-        // 输入单个字时，显示该字所有的多音。【待做】将来最好提供多音多义的组词示例
-        document.querySelector('#char_pinyin').innerHTML = `
-        ${pinyin(e.target.value[0], {multiple: true}).split(' ').map(p => `
+      // 输入单个字时，显示该字所有的多音。【待做】将来最好提供多音多义的组词示例
+      document.querySelector('#char_pinyin').innerHTML = `
+        ${pinyin(e.target.value[0], { multiple: true }).split(' ').map(p => `
             <div class="column">
               <div class="box">
                 <h1 class="title" id="char_pinyin" style="font-size: 98px;">${p}</h1>
@@ -188,15 +632,33 @@
           `).join('')}
         `;
 
+    });
+
+    // 演示笔画的event handler
+    for (const [i, button] of document.querySelectorAll('.btn_animate').entries()) {
+      button.addEventListener('click', function (e) {
+        writers[i].animateCharacter();
       });
+    }
 
-      // 演示笔画的event handler
-      for (const [i,button] of document.querySelectorAll('.btn_animate').entries()) {
-        button.addEventListener('click', function(event) {
-          writers[i].animateCharacter();
+    // 控制导航的event handler
+    document.querySelectorAll('.navbar a').forEach(tab => {
+      tab.addEventListener('click', function (e) {
+        const id = e.target.parentNode.dataset.id;
+        document.querySelector(`.tab_title.${id}`).classList.add('is-active');
+        document.querySelectorAll(`.tab_title:not(.${id})`).forEach(title => {
+          title.classList.remove('is-active');
         });
-      }
 
-    </script>
-	</body>
+        document.querySelector(`.tab_pane.${id}`).classList.remove('is_hidden');
+        document.querySelectorAll(`.tab_pane:not(.${id})`).forEach(pane => {
+          pane.classList.add('is_hidden');
+        });
+      });
+    });
+
+
+  </script>
+</body>
+
 </html>
