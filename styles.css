@@ -13,7 +13,6 @@ html,body {
 
 .btn_animate {
   font-size: 48px;
-  width: calc(100% - 2rem);
 }
 
 .is_hidden {
