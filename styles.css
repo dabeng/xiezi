@@ -28,12 +28,12 @@ html,body {
   font-size: 64px;
 }
 
-#pianpang_table {
-  font-size: 97px;
+.table {
+  font-size: 60px;
   font-family: "Kai Ti";
 }
 
-#pianpang_table th, #pianpang_table td {
+.table th, #pianpang_table td {
   padding: 0.25em;
 }
 

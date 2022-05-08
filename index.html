@@ -11,15 +11,17 @@
 </head>
 
 <body>
-  <div class="tabs navbar" style="font-size: 72px;">
+  <div class="tabs navbar" style="font-size: 60px;">
     <ul>
       <li class="tab_title xiezi is-active" data-id="xiezi"><a>写字</a></li>
       <li class="tab_title pianpang" data-id="pianpang"><a>偏旁</a></li>
       <li class="tab_title zaozifa" data-id="zaozifa"><a>造字法</a></li>
       <li class="tab_title tixuqiu" data-id="tixuqiu">
-        <a href="https://github.com/dabeng/xiezi/issues">
-          <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
-          <span>提需求</span>
+        <a href="https://github.com/dabeng/xiezi/issues" target="_blank">
+          <span>提需求&emsp;</span>
+          <figure class="image is-64x64">
+            <img src="logo.png"/>
+          </figure>
         </a>
       </li>
     </ul>
@@ -607,7 +609,7 @@
   </div>
 
   <div class="tab_pane zaozifa is_hidden">
-    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" id="pianpang_table">
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" id="zaozifa_table">
       <thead>
         <tr>
           <th>名称</th>
@@ -619,24 +621,32 @@
         <tr>
           <td>象形</td>
           <td>象形就是用文字线条或笔画描摹事物形状或特征的一种造字法</td>
-          <td>马，鱼</td>
+          <td>马 鱼</td>
         </tr>
         <tr>
           <td>指事</td>
           <td>指事一般是指在象形字的基础上加上指示性符号或用纯符号组合来创造新字的方法</td>
-          <td>刃，本</td>
+          <td>刃 本</td>
         </tr>
         <tr>
           <td>会意</td>
           <td>会意是用两个或两个以上的偏旁(独体字)，按意义组合起来表示一个新意义的造字方法</td>
-          <td>歪，掰</td>
+          <td>歪 掰</td>
         </tr>
         <tr>
           <td>形声</td>
           <td>形声是一种半意半音的造字法。既把表示声音的声旁和表示意义的形旁搭配起来表示新意义的造字方法</td>
-          <td>马，鱼</td>
+          <td>城 病</td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <td><b>备注</b></td>
+          <td colspan="2">在现行汉字中，象形、指事、会意这三类字加起来占比接近10%，而形声字占90%以上。关于造字法的更详细解读，请参考这篇文章
+            <a href="http://www.360doc.com/content/18/0904/13/39712096_783785705.shtml" target="_blank">《中国四大造字法》</a>
+          </td>
+        </tr>
+      </tfoot>
     </table>
   </div>
 
