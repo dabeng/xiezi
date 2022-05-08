@@ -8,6 +8,14 @@ html,body {
   margin: 0;
 }
 
+.tabs a {
+  padding: 0.25em 0.5em;
+}
+
+.tixuqiu {
+  background-color: #eee;
+}
+
 .navbar-item img {
   max-height: 108px;
 }
