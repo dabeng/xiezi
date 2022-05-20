@@ -6,6 +6,7 @@
 html,body {
   padding: 0;
   margin: 0;
+  font-family: 'KaiTi';
 }
 
 .tabs a {
@@ -24,13 +25,22 @@ html,body {
   font-size: 36px;
 }
 
+.char_fallback {
+  width: 800px;
+  height: 800px;
+  line-height: 800px;
+  margin: -800px auto 0 auto;
+  font-size: 720px;
+  font-family: cursive;
+}
+
 .btn_animate {
   font-size: 64px;
 }
 
 .table {
   font-size: 60px;
-  font-family: "Kai Ti";
+  font-family: cursive;
 }
 
 .table th, #pianpang_table td {
