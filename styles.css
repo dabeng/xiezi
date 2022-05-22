@@ -1,12 +1,7 @@
-@font-face {
-  font-family: "Kai Ti";
-  src: url("/FangZhengKaiTiJianTi.ttf");
-}
 
 html,body {
   padding: 0;
   margin: 0;
-  font-family: 'KaiTi';
 }
 
 .tabs a {
