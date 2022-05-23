@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="bulma.min.css" />
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.2/dist/hanzi-writer.min.js"></script>
@@ -661,6 +661,7 @@
   </div>
 
   <script type="text/javascript">
+    // 笔画库，拼音库不能顺利载入时，我们用如下备选方案，只提供大号的楷体演示字体
     if (typeof HanziWriter === 'undefined') {
       const writers = Array.from(Array(10), (v, i) => {
         return document.querySelector('#char_target_' + (i + 1)).nextElementSibling;
@@ -675,6 +676,7 @@
             // 更新相应的示例字体
             writers[i - 1].classList.remove('is_hidden');
             writers[i - 1].innerHTML = (e.target.value[i - 1]);
+            writers[i - 1].nextElementSibling.classList.add('is_hidden');
           } else {
             document.querySelector('#char_target_' + i).parentNode.classList.add('is_hidden');
             document.querySelector('#char_target_' + i).nextElementSibling.classList.add('is_hidden');
