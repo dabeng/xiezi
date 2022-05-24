@@ -6,8 +6,8 @@
   <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="bulma.min.css" />
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.2/dist/hanzi-writer.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/zh-lx/pinyin-pro@latest/dist/pinyin-pro.js"></script>
+  <script src="hanzi-writer.min.js"></script>
+  <script src="pinyin-pro.js"></script>
 </head>
 
 <body>
@@ -44,7 +44,6 @@
           <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
           <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
-        <div class="char_fallback is_hidden"></div>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
@@ -55,7 +54,6 @@
           <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
           <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
-        <div class="char_fallback is_hidden"></div>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
@@ -66,7 +64,6 @@
           <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
           <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
-        <div class="char_fallback is_hidden"></div>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
@@ -77,7 +74,6 @@
           <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
           <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
-        <div class="char_fallback is_hidden"></div>
         <button class="button is-primary is-fullwidth btn_animate" style="font-size: 48px;">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
@@ -88,7 +84,6 @@
           <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
           <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
-        <div class="char_fallback is_hidden"></div>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
@@ -99,7 +94,6 @@
           <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
           <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
-        <div class="char_fallback is_hidden"></div>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
@@ -110,7 +104,6 @@
           <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
           <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
-        <div class="char_fallback is_hidden"></div>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
@@ -121,7 +114,6 @@
           <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
           <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
-        <div class="char_fallback is_hidden"></div>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
@@ -132,7 +124,6 @@
           <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
           <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
-        <div class="char_fallback is_hidden"></div>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
       <div class="column is-narrow is_hidden">
@@ -143,7 +134,6 @@
           <line x1="400" y1="0" x2="400" y2="800" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
           <line x1="0" y1="400" x2="800" y2="400" stroke="#f14668" stroke-width="5" stroke-dasharray="10,10" />
         </svg>
-        <div class="char_fallback is_hidden"></div>
         <button class="button is-primary is-fullwidth btn_animate">演示</button>
       </div>
     </div>
@@ -661,44 +651,12 @@
   </div>
 
   <script type="text/javascript">
-    // 笔画库，拼音库不能顺利载入时，我们用如下备选方案，只提供大号的楷体演示字体
-    if (typeof HanziWriter === 'undefined') {
-      const writers = Array.from(Array(10), (v, i) => {
-        return document.querySelector('#char_target_' + (i + 1)).nextElementSibling;
-      });
 
-      document.querySelector('#char_source').addEventListener('change', e => {
-        /* 更新字 */
-        for (let i = 1; i <= 10; i++) {
-          if (i <= e.target.value.length) {
-            // 根据字的多少，来切换显示田字格背景
-            document.querySelector('#char_target_' + i).parentNode.classList.remove('is_hidden');
-            // 更新相应的示例字体
-            writers[i - 1].classList.remove('is_hidden');
-            writers[i - 1].innerHTML = (e.target.value[i - 1]);
-            writers[i - 1].nextElementSibling.classList.add('is_hidden');
-          } else {
-            document.querySelector('#char_target_' + i).parentNode.classList.add('is_hidden');
-            document.querySelector('#char_target_' + i).nextElementSibling.classList.add('is_hidden');
-          }
-        }
-
-        /* 更新拼音 */
-        // 输入多于一个字时，不显示拼音
-        if (e.target.value.length > 1) {
-          document.querySelector('#char_pinyin').innerHTML = ``;
-          return;
-        }
-
-
-      });
-    } else {
       const writers = Array.from(Array(10), (v, i) => {
         return HanziWriter.create('char_target_' + (i + 1), '', {
           width: 800,
           height: 800,
           padding: 5,
-          showOutline: true,
         });
       });
 
@@ -711,13 +669,25 @@
             // 根据字的多少，来切换显示田字格背景
             document.querySelector('#char_target_' + i).parentNode.classList.remove('is_hidden');
             // 更新相应的示例字体
-            writers[i - 1].setCharacter(e.target.value[i - 1]);
+            writers[i - 1].setCharacter('');
+            writers[i - 1] = HanziWriter.create('char_target_' + (i), e.target.value[i - 1], {
+              width: 800,
+              height: 800,
+              padding: 5,
+              charDataLoader: async function(char, onComplete) {
+                if (char) {
+                  let response = await fetch("https://dabeng.github.io/xiezi/data/" + char + ".json");
+                  let charData = await response.json();
+                  onComplete(charData);
+                }
+              }
+            });
           } else {
             document.querySelector('#char_target_' + i).parentNode.classList.add('is_hidden');
           }
         }
 
-        /* 更新拼音 */
+        // 更新拼音
         // 输入多于一个字时，不显示拼音
         if (e.target.value.length > 1) {
           document.querySelector('#char_pinyin').innerHTML = ``;
@@ -758,7 +728,6 @@
           });
         });
       });
-    }
 
   </script>
 </body>
