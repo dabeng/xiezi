@@ -1,5 +1,5 @@
 # 写字
-感谢笔画库的作者--[David Chanin](https://github.com/chanind/hanzi-writer), 感谢拼音库的作者--[zhoulixiang](https://github.com/zh-lx/pinyin-pro)，使陪孩子写字，不再那么痛苦。
+感谢笔画库的作者--[David Chanin](https://github.com/chanind/hanzi-writer), 感谢拼音库的作者--[zhoulixiang](https://github.com/zh-lx/pinyin-pro)，使陪孩子写字这件事，不再那么痛苦。
 
 ## [在线试一下](https://dabeng.github.io/xiezi/)
 
